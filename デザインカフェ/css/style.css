@@ -169,7 +169,6 @@ body{
     align-items: center;
     max-width: 680px;
     margin: 0 auto;
-    border-bottom: solid 1px #000;
 }
 .event_content p{
     line-height: 1.95;
@@ -178,6 +177,9 @@ body{
 }
 .event_content .p .date{
     border: none;
+}
+.event__link{
+    border-bottom: 1px solid #4f260b;
 }
 /* access */
 .access_content{
