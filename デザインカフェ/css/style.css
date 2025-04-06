@@ -10,6 +10,7 @@
     position: absolute;
     width: 100%;
     box-sizing: border-box;
+    z-index: 10;
 }
 .header__nav ul{
     display: flex;
@@ -25,6 +26,88 @@
     font-weight: bold;
     font-size: 18px;
 }
+.hamburger,
+.header__nav-sp{
+    display: none;
+}
+
+@media screen and (max-width: 1100px ) {
+    .hamburger {
+        display: block;
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .hamburger span{
+        position: absolute;
+        width: 33px;
+        height: 2px;
+        background-color: #fff;
+        top: 16px;
+        left: 0;
+        transition: 0.4s;
+    }
+    .hamburger span::before,
+    .hamburger span::after{
+        position: absolute;
+        content: "";
+        width: 33px;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.4s;
+    }
+    .hamburger span::before {
+        top: -15px;
+    }
+    .hamburger span::after {
+        bottom: -15px;
+    }
+    .open span {
+        background-color: transparent;
+    }
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .open span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .header__nav-sp {
+        position: absolute;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000a5;
+    }
+    .header__nav-sp ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .header__nav-sp a {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+      "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+    .header__nav {
+        display: none;
+    }
+}
+
+
+
+
+
 body{
     background-color: #e8d9bf;
     margin: 0 auto;
@@ -51,6 +134,9 @@ body{
     padding-bottom: 93px;
     line-height: 1.65;
     font-size: 23px;
+}
+.br-sp{
+    display: none;
 }
 
 .wrap{
@@ -142,6 +228,10 @@ body{
     margin: 0 auto;
     width: 25%;
 }
+.gallery-wrap{
+    display: flex;
+    max-width: none;
+}
 /* event */
 #event{
     padding: 0 10px;
@@ -196,8 +286,9 @@ body{
     filter: grayscale(100%) invert(92%) contrast(83%);
 }
 iframe{
+    aspect-ratio: 375 / 190;
     width: 100%;
-    height: 471px;
+    height: 100%;
 }
 /* footer */
 #footer{
@@ -233,3 +324,103 @@ iframe{
     right: 20px;
     width: 125px;
 }
+.slick-dots{
+    bottom: 0;
+}
+.slick-dots li button::before,
+.slick-dots li.slick-active button::before {
+    color: #ffffff;
+}
+@media screen and (max-width: 1100px) {
+    .concept_title{
+        font-size: 70px;
+    }
+    .concept_text{
+        font-size: 25px;
+    }
+}
+ @media screen and (max-width: 767px) {
+    .wrap{
+        display: block;
+    }
+    #menu{
+        padding: 0 0;
+    }
+    .about-ustext{
+        width: 100%;
+        padding-left: 0%;
+    }
+    .about-ustext h3 {
+        font-size: 70px;
+        line-height: 1.25;
+        padding-left: 10px;
+    }
+    .about-ustext p {
+        line-height: 1.75;
+        font-size: 16px;
+        padding-top: 19px;
+        padding-left: 10px;
+    }
+    .br-sp{
+        display: block;
+    }
+    .coffee{
+        width: 100%;
+        
+    }
+    .menu_content{
+        padding: 0 38px;
+    }
+    .menu_content ul{
+        display: block;
+    }
+    .menu_content li{
+        width: 100%;
+    }
+    .menu_content li img {
+        border-top-right-radius: 90px;
+    }
+    .menu_content h3{
+        font-size: 40px;
+    }
+    .gallery_content ul {
+        padding-top: 16px;
+        padding-bottom: 0px;
+    }
+    .event_content ul{
+        max-width: 89%;
+    }
+    .event_content li{
+        display: block;
+    }
+    .event_content p{
+        font-size: 16px
+    }
+    p .event__link{
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .footer_content{
+        display: block;
+        padding-left: 20px;
+        padding-left: 40px;
+    }
+    .footer-logo{
+        width: 280px;
+    }
+    .footer-text{
+        line-height: 1;
+        margin: 0;
+        font-size: 31px;
+        padding-top: 27px;
+    } 
+
+ }
+ /* 質問です 
+ １、Aboutusのロゴが上にいかず困りました。PC版の制作の段階で間違っているのか、このままでもできるのか教えてください。
+ ２、ギャラリーのLightboxのプラグインで、押すとバツが出るようにするにはヘッダーの時に作ったのと同じようにするのですか？
+ ３、イベントの３点リーダーがうまく当たらず適応しませんでした。cssで当てるものは間違っていないと思うので、
+    当てる場所に問題があるのかと思うのですが教えてください.
+    
+ */
