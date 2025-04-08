@@ -342,24 +342,56 @@ iframe{
  @media screen and (max-width: 767px) {
     .wrap{
         display: block;
+        margin: 0;
+    }
+    .concept_text{
+        font-size: 17px;
+        padding-top: 38px;
+    }
+    .concept_title{
+        font-size: 38px;
+        line-height: 1.15;
+        padding-top: 22px;
+    }
+    .concept_subtext{
+        font-size: 16px;
+        line-height: 1.87;
+        padding-top: 12px;
+        padding-bottom: 15px;
     }
     #menu{
         padding: 0 0;
+    }
+    #about-us{
+        position: relative;
+        padding-top: 90px;
+        padding-left: 0;
+        padding-right: 0;
+    
+    }
+    .about-ustext img{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 47px;
     }
     .about-ustext{
         width: 100%;
         padding-left: 0%;
     }
     .about-ustext h3 {
-        font-size: 70px;
+        font-size: 36px;
         line-height: 1.25;
-        padding-left: 10px;
+        padding-left: 20px;
+        padding-top: 32px;
     }
     .about-ustext p {
         line-height: 1.75;
         font-size: 16px;
         padding-top: 19px;
-        padding-left: 10px;
+        margin-bottom: 50px;
+        padding: 0 20px;
     }
     .br-sp{
         display: block;
@@ -371,56 +403,91 @@ iframe{
     .menu_content{
         padding: 0 38px;
     }
+    .menu_content img{
+        border-top-right-radius:0;
+    }
+    .menu-logo{
+        width: 87px;
+        height: 45px;
+    }
     .menu_content ul{
         display: block;
     }
     .menu_content li{
         width: 100%;
+        padding-top: 23px;
     }
     .menu_content li img {
-        border-top-right-radius: 90px;
+        border-top-right-radius: 50px;
     }
     .menu_content h3{
         font-size: 40px;
+    }
+    .menu_content p{
+        margin-bottom: 40px
+    }
+    .gallery-logo {
+        margin: 0 auto;
+        align-items: center;
+        width: 142px;
+        height: 45px;
+        padding-top: 38px;
     }
     .gallery_content ul {
         padding-top: 16px;
         padding-bottom: 0px;
     }
+    #event{
+        padding: 0 0;
+    }
+    .event-logo{
+        width: 100px;
+        height: 45px;
+        padding-bottom: 15px;
+        padding-top: 23px;
+    }
     .event_content ul{
-        max-width: 89%;
+        padding: 35px 30px;
+        margin: 0 20px;
     }
     .event_content li{
         display: block;
     }
     .event_content p{
-        font-size: 16px
-    }
-    p .event__link{
-        display: block;
+        font-size: 16px;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .access-logo {
+        width: 124px;
+        height: 45px;
+        margin: 0 auto;
+        padding-top: 26px;
+        padding-bottom: 5px;
+    }
+    
+    #footer{
+        padding: 0 0;
     }
     .footer_content{
         display: block;
         padding-left: 20px;
-        padding-left: 40px;
+        padding-top: 40px;
     }
-    .footer-logo{
-        width: 280px;
-    }
+    
     .footer-text{
-        line-height: 1;
+        line-height: 1.72;
         margin: 0;
-        font-size: 31px;
+        font-size: 18px;
         padding-top: 27px;
     } 
+    .totop {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
 
  }
- /* 質問です 
- １、Aboutusのロゴが上にいかず困りました。PC版の制作の段階で間違っているのか、このままでもできるのか教えてください。
- ２、ギャラリーのLightboxのプラグインで、押すとバツが出るようにするにはヘッダーの時に作ったのと同じようにするのですか？
- ３、イベントの３点リーダーがうまく当たらず適応しませんでした。cssで当てるものは間違っていないと思うので、
-    当てる場所に問題があるのかと思うのですが教えてください.
-    
- */
+}
+ 

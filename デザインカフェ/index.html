@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css">
     <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" href="./css/lightbox.min.css">
 
 </head>
 <body>
@@ -78,45 +78,7 @@
         </div>
     </header>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script>
-        $(function() {
-            $(".hamburger").click(function () {
-                $(".hamburger").toggleClass("open");
-                $(".header__nav-sp").fadeToggle("");
-            });
-            $(".main-visual").slick({
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true
-            });
-            $(".gallery-wrap").slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false,
-                dots: false,
-                infinite: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                responsive: [{
-                 breakpoint: 767,
-                 settings: {
-                 slidesToShow: 1
-                 }
-                }]
-            })
-                .lightbox.option ({
-                    'fadeDuration': 700,
-                    'imageFadeDuration': 1800,
-                    'resizeDuration': 300,
-                    'alwaysShowNavOnTouchDevices': true,
-                    'wrapAround': true,
-                })
-            });
-    </script> 
+    
     <main>
 <!--concept -->
         <section id="concept">
@@ -267,5 +229,44 @@
                 <a href="#header"><img src="./images/to_top@2x.png" alt="トップに戻る"></a>
             </p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
+    <script>
+        $(function() {
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header__nav-sp").fadeToggle("");
+            });
+            $(".main-visual").slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+            $(".gallery-wrap").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                 breakpoint: 767,
+                 settings: {
+                 slidesToShow: 1
+                 }
+                }]
+            })
+                .lightbox.option ({
+                    'fadeDuration': 700,
+                    'imageFadeDuration': 1800,
+                    'resizeDuration': 300,
+                    'alwaysShowNavOnTouchDevices': true,
+                    'wrapAround': true,
+                })
+            });
+    </script> 
 </body>
 </html>
